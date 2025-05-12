@@ -12,7 +12,9 @@ app.use(morgan('dev'));
 app.use(express.json());
 app.use('/api/users',user);
 app.use('/api/books',books);
-
+app.get('/',(req,res)=>{
+    res.send("Service is started")
+})
 
 app.listen(3000,()=>{
     console.log('Running On localhost:3000/');
